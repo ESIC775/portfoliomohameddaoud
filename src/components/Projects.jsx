@@ -7,7 +7,7 @@ const Projects = () => {
             title: "Mon Portfolio",
             description: "La version actuelle de mon portfolio, réalisée avec React et Tailwind CSS.",
             tags: ["React", "Tailwind CSS", "Vite"],
-            githubLink: "#",
+            githubLink: "https://github.com/Medaou12/portfolio",
             demoLink: "#",
             image: "/portfolio-preview.png"
         },
