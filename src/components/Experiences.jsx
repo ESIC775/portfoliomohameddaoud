@@ -1,18 +1,44 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Experiences = () => {
+    const listVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+    };
+
     return (
-        <section id="experiences" className="py-16 sm:py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden min-h-screen">
+        <section id="experiences" className="py-16 sm:py-20 relative overflow-hidden min-h-screen">
             {/* Background decoration */}
             <div className="absolute top-20 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
             
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                <motion.h2 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+                >
                     Expériences Professionnelles
-                </h2>
-                <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
+                </motion.h2>
+                <motion.div 
+                    variants={listVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="max-w-4xl mx-auto space-y-6 sm:space-y-8"
+                >
                     {/* Experience 1 - Al-Gamil */}
-                    <div className="relative pl-8 sm:pl-12 border-l-2 border-blue-500/50 hover:border-blue-500 transition-colors group">
+                    <motion.div variants={itemVariants} className="relative pl-8 sm:pl-12 border-l-2 border-blue-500/50 hover:border-blue-500 transition-colors group">
                         <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500 group-hover:scale-125 transition-transform shadow-lg shadow-blue-500/50"></div>
                         <div className="glass rounded-xl p-4 sm:p-6 hover-lift">
                             <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Développeur Web</h3>
@@ -47,10 +73,10 @@ const Experiences = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
                     
                     {/* Experience 2 - Wilo-Technologie */}
-                    <div className="relative pl-8 sm:pl-12 border-l-2 border-purple-500/50 hover:border-purple-500 transition-colors group">
+                    <motion.div variants={itemVariants} className="relative pl-8 sm:pl-12 border-l-2 border-purple-500/50 hover:border-purple-500 transition-colors group">
                         <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-purple-500 group-hover:scale-125 transition-transform shadow-lg shadow-purple-500/50"></div>
                         <div className="glass rounded-xl p-4 sm:p-6 hover-lift">
                             <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Développeur Web</h3>
@@ -89,8 +115,8 @@ const Experiences = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );

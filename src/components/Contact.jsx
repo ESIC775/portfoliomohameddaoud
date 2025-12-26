@@ -1,19 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-16 sm:py-20 bg-gradient-to-b from-gray-800 to-gray-900 relative overflow-hidden min-h-screen">
+        <section id="contact" className="py-16 sm:py-20 relative overflow-hidden min-h-screen">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
             
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+                <motion.h2 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+                >
                     Me Contacter
-                </h2>
+                </motion.h2>
                 
                 <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {/* Contact Information */}
-                    <div className="space-y-6">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-6"
+                    >
                         <div className="glass rounded-2xl p-6 sm:p-8 hover-lift">
                             <h3 className="text-xl sm:text-2xl font-bold mb-6 text-white">Informations de Contact</h3>
                             
@@ -48,10 +59,15 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                     
                     {/* Contact Form */}
-                    <div className="glass rounded-2xl p-6 sm:p-8 shadow-2xl hover-lift">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="glass rounded-2xl p-6 sm:p-8 shadow-2xl hover-lift"
+                    >
                         <h3 className="text-xl sm:text-2xl font-bold mb-6 text-white">Envoyez un Message</h3>
                         <form className="space-y-5">
                             {/* Name Input */}
@@ -95,7 +111,7 @@ const Contact = () => {
                                 Envoyer
                             </button>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

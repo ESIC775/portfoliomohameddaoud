@@ -9,6 +9,8 @@ import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import Preloader from './components/Preloader'
 
+import StarryBackground from './components/StarryBackground';
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -23,11 +25,12 @@ function App() {
 
   return (
     <>
+      <StarryBackground />
       {loading ? (
         <Preloader />
       ) : (
         <Router>
-          <div className="bg-gray-900 min-h-screen text-white flex flex-col transition-opacity duration-700 animate-[fadeIn_0.7s_ease-out]">
+          <div className="min-h-screen text-white flex flex-col transition-opacity duration-700 animate-[fadeIn_0.7s_ease-out]">
             <Header />
             <main className="flex-grow">
               <Routes>
@@ -39,7 +42,7 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>
             </main>
-            <footer className="py-6 text-center text-gray-500 bg-gray-900 border-t border-gray-800">
+            <footer className="py-6 text-center text-gray-500 bg-gray-900/50 backdrop-blur-sm border-t border-gray-800">
               <p>© {new Date().getFullYear()} Mohamed Daoud. Tous droits réservés.</p>
             </footer>
           </div>

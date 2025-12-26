@@ -9,15 +9,16 @@ const Projects = () => {
             tags: ["React", "Tailwind CSS", "Vite"],
             githubLink: "https://github.com/Medaou12/portfolio",
             demoLink: "#",
-            image: "/portfolio-preview.png"
+            image: "/portfolio-v2.png"
         },
         {
             id: 1,
-            title: "BOOKSITE",
-            description: "Application web réalisée avec React.js et l'API Google Books pour le back-end...",
-            tags: ["React.js", "Google Books API"],
+            title: "Task Manager",
+            description: "Application web permettant de gérer des tâches (CRUD) avec React, Node.js, Express et MongoDB, incluant une API REST et une base de données.",
+            tags: ["React JS", "Node JS", "Express", "MongoDB"],
             githubLink: "#",
-            demoLink: "#"
+            demoLink: "#",
+            image: "/task-manager.png"
         },
         {
             id: 2,
@@ -86,7 +87,7 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projets" className="py-16 sm:py-20 bg-gray-900 relative overflow-hidden">
+        <section id="projets" className="py-16 sm:py-20 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
             

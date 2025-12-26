@@ -1,8 +1,14 @@
 import React from 'react';
 import Resume from '../components/Resume';
 
+import PageTransition from '../components/PageTransition';
+
 const ResumePage = () => {
-    return <Resume />;
+    return (
+        <PageTransition>
+            <Resume />
+        </PageTransition>
+    );
 };
 
 export default ResumePage;

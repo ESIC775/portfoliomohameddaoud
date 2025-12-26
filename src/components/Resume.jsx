@@ -1,19 +1,40 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Resume = () => {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.3
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }
+    };
+
     return (
-        <section id="formation" className="py-16 sm:py-20 bg-gray-900 relative overflow-hidden min-h-screen">
+        <section id="formation" className="py-16 sm:py-20 relative overflow-hidden min-h-screen">
             {/* Background decoration */}
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
             
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+            <motion.div 
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+            >
+                <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
                     Formation
-                </h2>
+                </motion.h2>
                 
                 <div className="max-w-5xl mx-auto space-y-8">
                     {/* Master 1 */}
-                    <div className="glass rounded-2xl p-6 sm:p-8 hover-lift group">
+                    <motion.div variants={itemVariants} className="glass rounded-2xl p-6 sm:p-8 hover-lift group">
                         <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
                             <div className="flex items-center">
                                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform flex-shrink-0">
@@ -22,7 +43,7 @@ const Resume = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl sm:text-2xl font-bold text-white">Master 1 Informatique</h3>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-white">Master Informatique</h3>
                                     <p className="text-blue-400 text-sm sm:text-base">Université Sorbonne Paris Nord</p>
                                 </div>
                             </div>
@@ -44,10 +65,10 @@ const Resume = () => {
                                 <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 hover:scale-105 transition-transform">RA/RV</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                     
                     {/* Licence */}
-                    <div className="glass rounded-2xl p-6 sm:p-8 hover-lift group">
+                    <motion.div variants={itemVariants} className="glass rounded-2xl p-6 sm:p-8 hover-lift group">
                         <div className="flex items-start justify-between flex-wrap gap-4 mb-4">
                             <div className="flex items-center">
                                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform flex-shrink-0">
@@ -80,9 +101,9 @@ const Resume = () => {
                                 <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 hover:scale-105 transition-transform">Algorithmique</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };
