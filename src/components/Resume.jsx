@@ -53,16 +53,16 @@ const Resume = () => {
                         </div>
                         
                         <p className="text-gray-400 mb-4 text-sm sm:text-base">
-                            Formation approfondie en informatique avec spécialisation en développement et nouvelles technologies
+                            M1 Informatique - Formation approfondie en informatique avec spécialisation en développement et nouvelles technologies
                         </p>
                         
                         <div>
                             <h4 className="text-white font-semibold mb-3 text-sm sm:text-base">Compétences acquises</h4>
                             <div className="flex flex-wrap gap-2">
-                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-sm text-blue-300 hover:scale-105 transition-transform">Développement Web</span>
-                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 hover:scale-105 transition-transform">Mobile</span>
-                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-sm text-blue-300 hover:scale-105 transition-transform">Informatique en nuage</span>
-                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 hover:scale-105 transition-transform">RA/RV</span>
+                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-sm text-blue-300 hover:scale-105 transition-transform">Algorithmique</span>
+                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 hover:scale-105 transition-transform">Structures de données avancées</span>
+                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-sm text-blue-300 hover:scale-105 transition-transform">Java</span>
+                                <span className="px-3 py-1.5 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-purple-500/30 rounded-full text-sm text-purple-300 hover:scale-105 transition-transform">Programmation fonctionnelle</span>
                             </div>
                         </div>
                     </motion.div>
