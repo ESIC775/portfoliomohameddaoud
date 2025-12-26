@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -23,12 +24,12 @@ const Hero = () => {
                             Développeur Fullstack passionné par les nouvelles technologies
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <a href="#contact" className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium transition-all shadow-lg hover:shadow-blue-500/50 hover:scale-105 text-center">
+                            <Link to="/contact" className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium transition-all shadow-lg hover:shadow-blue-500/50 hover:scale-105 text-center">
                                 Me contacter
-                            </a>
-                            <a href="#projets" className="px-6 sm:px-8 py-3 rounded-full border-2 border-gray-600 hover:border-purple-500 text-gray-300 hover:text-white font-medium transition-all hover:bg-purple-500/10 text-center">
+                            </Link>
+                            <Link to="/projets" className="px-6 sm:px-8 py-3 rounded-full border-2 border-gray-600 hover:border-purple-500 text-gray-300 hover:text-white font-medium transition-all hover:bg-purple-500/10 text-center">
                                 Voir mes projets
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     
